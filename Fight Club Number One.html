@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#cimiseni -->
+<html lang="ro"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fight Club Number One</title>
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: #080808;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+           MENIU
+        ========================= */
+
+        header {
+            height: 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 60px;
+
+            background-color: #0d0d0d;
+            border-bottom: 1px solid #222;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: red;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+
+        /* =========================
+           ACASA
+        ========================= */
+
+        .hero {
+            min-height: calc(100vh - 80px);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding-left: 100px;
+        }
+
+        .hero > p:first-child {
+            color: #999;
+
+            letter-spacing: 3px;
+
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: 90px;
+
+            line-height: 0.9;
+
+            margin: 20px 0;
+        }
+
+        h1 span {
+            color: red;
+        }
+
+        .descriere {
+            color: #aaa;
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           BUTON
+        ========================= */
+
+        .buton {
+            display: inline-block;
+
+            width: fit-content;
+
+            padding: 15px 25px;
+
+            background-color: red;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .buton:hover {
+            background-color: white;
+
+            color: black;
+        }
+
+
+        /* =========================
+           SUBTITLU
+        ========================= */
+
+        .subtitlu {
+            color: red;
+
+            letter-spacing: 3px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           LOCATII
+        ========================= */
+
+        .locatii {
+            padding: 120px 100px;
+
+            background-color: #0d0d0d;
+        }
+
+        .locatii h2 {
+            font-size: 55px;
+
+            margin: 15px 0 50px;
+        }
+
+        .locatii-container {
+            display: flex;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .locatie {
+            width: 350px;
+
+            padding: 35px;
+
+            background-color: #151515;
+
+            border: 1px solid #222;
+
+            transition: 0.3s;
+        }
+
+        .locatie:hover {
+            border-color: red;
+
+            transform: translateY(-5px);
+        }
+
+        .locatie h3 {
+            font-size: 28px;
+
+            margin-top: 0;
+        }
+
+        .locatie p {
+            color: #999;
+
+            line-height: 1.6;
+        }
+
+        .locatie a {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            color: red;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .locatie a:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           DESPRE NOI
+        ========================= */
+
+        .despre {
+            padding: 120px 100px;
+
+            background-color: #080808;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 80px;
+        }
+
+        .despre-text {
+            max-width: 550px;
+        }
+
+        .despre h2 {
+            font-size: 55px;
+
+            margin: 15px 0 30px;
+        }
+
+        .despre-text > p:not(.subtitlu) {
+            color: #999;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+        .valori {
+            width: 400px;
+        }
+
+        .valoare {
+            padding: 20px 0;
+
+            border-bottom: 1px solid #222;
+        }
+
+        .valoare span {
+            color: red;
+
+            font-weight: bold;
+        }
+
+        .valoare h3 {
+            margin: 8px 0;
+
+            font-size: 22px;
+        }
+
+        .valoare p {
+            color: #777;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           ANTRENAMENTE
+        ========================= */
+
+        .antrenamente {
+            padding: 120px 100px;
+
+            background-color: #0d0d0d;
+        }
+
+        .antrenamente h2 {
+            font-size: 55px;
+
+            margin: 15px 0 50px;
+        }
+
+        .antrenamente-container {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .antrenament {
+            padding: 40px;
+
+            background-color: #151515;
+
+            border: 1px solid #222;
+
+            transition: 0.3s;
+        }
+
+        .antrenament:hover {
+            border-color: red;
+
+            transform: translateY(-5px);
+        }
+
+        .numar {
+            color: red;
+
+            font-size: 14px;
+
+            font-weight: bold;
+        }
+
+        .antrenament h3 {
+            font-size: 25px;
+
+            margin: 20px 0 15px;
+        }
+
+        .antrenament p {
+            color: #999;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           GALERII
+        ========================= */
+
+        .galerie-locatie {
+            padding: 120px 100px;
+
+            background-color: #080808;
+        }
+
+        .galerie-locatie:nth-of-type(even) {
+            background-color: #0d0d0d;
+        }
+
+        .galerie-locatie h2 {
+            font-size: 55px;
+
+            margin: 15px 0 50px;
+        }
+
+        .galerie-container {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .media-box {
+            background-color: #151515;
+
+            border: 1px solid #222;
+
+            padding: 10px;
+
+            transition: 0.3s;
+        }
+
+        .media-box:hover {
+            border-color: red;
+
+            transform: translateY(-3px);
+        }
+
+        .media-box img {
+            width: 100%;
+
+            height: 400px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .media-box video {
+            width: 100%;
+
+            max-height: 500px;
+
+            display: block;
+
+            background-color: black;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            padding: 120px 100px;
+
+            background-color: #080808;
+        }
+
+        .contact h2 {
+            font-size: 55px;
+
+            margin: 15px 0 50px;
+        }
+
+        .contact-container {
+            display: flex;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            flex: 1;
+
+            min-width: 250px;
+
+            padding: 35px;
+
+            background-color: #151515;
+
+            border: 1px solid #222;
+        }
+
+        .contact-card h3 {
+            font-size: 22px;
+
+            margin-top: 0;
+        }
+
+        .contact-card p {
+            color: #999;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px 100px;
+
+            background-color: #080808;
+
+            border-top: 1px solid #222;
+
+            color: #666;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TELEFON
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 0 20px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 50px 30px;
+            }
+
+            h1 {
+                font-size: 55px;
+            }
+
+            .locatii,
+            .despre,
+            .antrenamente,
+            .galerie-locatie,
+            .contact {
+                padding: 80px 30px;
+            }
+
+            .despre {
+                flex-direction: column;
+            }
+
+            .valori {
+                width: auto;
+            }
+
+            .antrenamente-container,
+            .galerie-container {
+                grid-template-columns: 1fr;
+            }
+
+            .locatie {
+                width: auto;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENIU
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            FIGHT CLUB <span>NUMBER ONE</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#acasa">
+                Acasă
+            </a>
+
+            <a href="file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#despre">
+                Despre
+            </a>
+
+            <a href="file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#locatii">
+                Locații
+            </a>
+
+            <a href="file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#antrenamente">
+                Antrenamente
+            </a>
+
+            <a href="file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         ACASA
+    ========================= -->
+
+    <section id="acasa" class="hero">
+
+        <p>
+            KICKBOXING • DISCIPLINĂ • RESPECT
+        </p>
+
+
+        <h1>
+
+            FIGHT CLUB
+
+            <br>
+
+            <span>
+                NUMBER ONE
+            </span>
+
+        </h1>
+
+
+        <p class="descriere">
+
+            Devino mai puternic. Muncește. Evoluează.
+
+        </p>
+
+
+        <a href="file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#locatii" class="buton">
+
+            VEZI LOCAȚIILE
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         LOCATII
+    ========================= -->
+
+    <section id="locatii" class="locatii">
+
+        <p class="subtitlu">
+            UNDE NE GĂSEȘTI
+        </p>
+
+
+        <h2>
+            LOCAȚIILE NOASTRE
+        </h2>
+
+
+        <div class="locatii-container">
+
+
+            <!-- CIMISENI -->
+
+            <div class="locatie">
+
+                <h3>
+                    CIMIȘENI
+                </h3>
+
+
+                <p>
+
+                    Antrenamente de kickboxing pentru toate
+                    nivelurile.
+
+                </p>
+
+
+                <a href="file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#cimiseni">
+
+                    VEZI GALERIA →
+
+                </a>
+
+            </div>
+
+
+            <!-- VADUL LUI VODA -->
+
+            <div class="locatie">
+
+                <h3>
+                    VADUL LUI VODĂ
+                </h3>
+
+
+                <p>
+
+                    Construiește-ți forța, disciplina și
+                    încrederea.
+
+                </p>
+
+
+                <a href="file:///C:/Users/ivipi/OneDrive/Desktop/Fight%20Club%20Number%20One/index.html#vadul">
+
+                    VEZI GALERIA →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DESPRE NOI
+    ========================= -->
+
+    <section id="despre" class="despre">
+
+
+        <div class="despre-text">
+
+            <p class="subtitlu">
+                CINE SUNTEM
+            </p>
+
+
+            <h2>
+                MAI MULT DECÂT UN CLUB.
+            </h2>
+
+
+            <p>
+
+                Fight Club Number One este un club dedicat
+                celor care vor să devină mai puternici,
+                mai disciplinați și mai încrezători.
+
+            </p>
+
+
+            <p>
+
+                Prin kickboxing și antrenamente serioase,
+                construim caracter, disciplină și respect.
+
+            </p>
+
+        </div>
+
+
+        <div class="valori">
+
+
+            <div class="valoare">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    DISCIPLINĂ
+                </h3>
+
+                <p>
+                    Muncește constant și nu renunța.
+                </p>
+
+            </div>
+
+
+            <div class="valoare">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    RESPECT
+                </h3>
+
+                <p>
+                    Respectul este baza oricărui luptător.
+                </p>
+
+            </div>
+
+
+            <div class="valoare">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    PERFORMANȚĂ
+                </h3>
+
+                <p>
+                    În fiecare zi devenim mai buni.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ANTRENAMENTE
+    ========================= -->
+
+    <section id="antrenamente" class="antrenamente">
+
+
+        <p class="subtitlu">
+            CE FACEM
+        </p>
+
+
+        <h2>
+            ANTRENAMENTE
+        </h2>
+
+
+        <div class="antrenamente-container">
+
+
+            <div class="antrenament">
+
+                <span class="numar">
+                    01
+                </span>
+
+                <h3>
+                    KICKBOXING
+                </h3>
+
+                <p>
+
+                    Dezvoltă-ți tehnica, condiția fizică
+                    și încrederea prin antrenamente de
+                    kickboxing.
+
+                </p>
+
+            </div>
+
+
+            <div class="antrenament">
+
+                <span class="numar">
+                    02
+                </span>
+
+                <h3>
+                    TOATE NIVELURILE
+                </h3>
+
+                <p>
+
+                    Antrenamente potrivite pentru orice
+                    nivel, de la cei care sunt la început
+                    până la cei care au deja experiență.
+
+                </p>
+
+            </div>
+
+
+            <div class="antrenament">
+
+                <span class="numar">
+                    03
+                </span>
+
+                <h3>
+                    PERFORMANȚĂ
+                </h3>
+
+                <p>
+
+                    Pentru cei care vor să își dezvolte
+                    abilitățile sportive și să își atingă
+                    următorul nivel.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALERIE CIMISENI
+    ========================= -->
+
+    <section id="cimiseni" class="galerie-locatie">
+
+
+        <p class="subtitlu">
+            FIGHT CLUB NUMBER ONE
+        </p>
+
+
+        <h2>
+            CIMIȘENI
+        </h2>
+
+
+        <div class="galerie-container">
+
+
+            <!-- POZA 1 -->
+
+            <div class="media-box">
+
+                <img src="./Fight Club Number One_files/cimiseni1.jpg" alt="Fight Club Number One Cimișeni">
+
+            </div>
+
+
+            <!-- POZA 2 -->
+
+            <div class="media-box">
+
+                <img src="./Fight Club Number One_files/cimiseni2.jpg" alt="Fight Club Number One Cimișeni">
+
+            </div>
+
+
+            <!-- POZA 3 -->
+
+            <div class="media-box">
+
+                <img src="./Fight Club Number One_files/cimiseni3.jpg" alt="Fight Club Number One Cimișeni">
+
+            </div>
+
+
+            <!-- VIDEO 1 -->
+
+            <div class="media-box">
+
+                <video controls="">
+
+                    <source src="video/cimiseni.mp4" type="video/mp4">
+
+                    Browserul tău nu poate reda acest videoclip.
+
+                </video>
+
+            </div>
+
+
+            <!-- VIDEO 2 -->
+
+            <div class="media-box">
+
+                <video controls="">
+
+                    <source src="video/cimiseni2.mp4" type="video/mp4">
+
+                    Browserul tău nu poate reda acest videoclip.
+
+                </video>
+
+            </div>
+
+
+            <!-- VIDEO 3 -->
+
+            <div class="media-box">
+
+                <video controls="">
+
+                    <source src="video/cimiseni3.mp4" type="video/mp4">
+
+                    Browserul tău nu poate reda acest videoclip.
+
+                </video>
+
+            </div>
+
+
+            <!-- VIDEO 4 -->
+
+            <div class="media-box">
+
+                <video controls="">
+
+                    <source src="video/cimiseni4.mp4" type="video/mp4">
+
+                    Browserul tău nu poate reda acest videoclip.
+
+                </video>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALERIE VADUL LUI VODA
+    ========================= -->
+
+    <section id="vadul" class="galerie-locatie">
+
+
+        <p class="subtitlu">
+            FIGHT CLUB NUMBER ONE
+        </p>
+
+
+        <h2>
+            VADUL LUI VODĂ
+        </h2>
+
+
+        <div class="galerie-container">
+
+
+            <!-- POZA VAD 1 -->
+
+            <div class="media-box">
+
+                <img src="./Fight Club Number One_files/vad.jpg" alt="Fight Club Number One Vadul lui Vodă">
+
+            </div>
+
+
+            <!-- POZA VAD 2 -->
+
+            <div class="media-box">
+
+                <img src="./Fight Club Number One_files/vad2.jpg" alt="Fight Club Number One Vadul lui Vodă">
+
+            </div>
+
+
+            <!-- POZA VAD 3 -->
+
+            <div class="media-box">
+
+                <img src="./Fight Club Number One_files/vad3.jpg" alt="Fight Club Number One Vadul lui Vodă">
+
+            </div>
+
+
+            <!-- VIDEO VADUL LUI VODA -->
+
+            <div class="media-box">
+
+                <video controls="">
+
+                    <source src="video/vadulluivoda.mp4" type="video/mp4">
+
+                    Browserul tău nu poate reda acest videoclip.
+
+                </video>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="contact">
+
+
+        <p class="subtitlu">
+            IA LEGĂTURA CU NOI
+        </p>
+
+
+        <h2>
+            CONTACT
+        </h2>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-card">
+
+                <h3>
+                    CIMIȘENI
+                </h3>
+
+                <p>
+
+                    Fight Club Number One
+
+                    <br><br>
+
+                    Informații despre antrenamente,
+                    program și înscrieri vor fi adăugate aici.
+
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    VADUL LUI VODĂ
+                </h3>
+
+                <p>
+
+                    Fight Club Number One
+
+                    <br><br>
+
+                    Informații despre antrenamente,
+                    program și înscrieri vor fi adăugate aici.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        Fight Club Number One © 2026
+
+    </footer>
+
+
+
+
+
+</body></html>
